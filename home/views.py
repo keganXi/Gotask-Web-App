@@ -12,3 +12,8 @@ class Home(ListView):
 class SignUp(ListView):
     queryset = ""
     template_name = "home/signup.html"
+
+
+class ForgotPassword(ListView):
+    queryset = ""
+    template_name = "home/forgot-password.html"

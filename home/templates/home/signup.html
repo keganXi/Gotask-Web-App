@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'home/default-links.html' %}
+        <link rel="stylesheet" href="{% static 'home/css/globals.css' %}"/>
+        <link rel="stylesheet" href="{% static 'home/css/signup.css' %}"/>
+        <title>GoTask - Sign up</title>
+    </head>
+
+    <body>
+
+        <div class="center-align top-spacing">
+            <div class="boxed">
+                <div class="signup-header">
+                    <span class="primary-c text-lg">Sign up</span><br>
+                    <span>Ready to save all your tasks! great let's get started with creating your account.</span>
+                </div>
+                <form method="POST">
+                    <input type="text" placeholder="Username" class="form-input"><br>
+                    <input type="email" placeholder="Email" class="form-input"><br>
+                    <input type="password" placeholder="Password" class="form-input"><br><br>
+                    <button class="auth-btn">Sign up</button>
+                </form>
+
+                <span class="">Already have an account?
+                    <a href="{% url 'home' %}" class="primary-c"> Sign in</a>
+                </span>
+            </div>
+        </div>
+
+    </body>
+</html>

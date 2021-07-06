@@ -21,4 +21,5 @@ import home.views as home_view
 urlpatterns = [
     path('', home_view.Home.as_view(), name='home'),
     path('accounts/sign-up/', home_view.SignUp.as_view(), name='sign-up'),
+    path('accounts/forgot-password/', home_view.ForgotPassword.as_view(), name='forgot-password'),
 ]
