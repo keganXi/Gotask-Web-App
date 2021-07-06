@@ -41,18 +41,43 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # setting cors policy is needed to make calls from ui to api
+    'corsheaders',
+    # add rest_framework support to the project
+    'rest_framework',
     'home.apps.HomeConfig',
+    'auth_app.apps.AuthAppConfig',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    # Add cors middleware (the order is important!)
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# For development purposes.
+CORS_ORIGIN_ALLOW_ALL = True
+
+# Django rest framework.
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': (
+#         'rest_framework.permissions.IsAuthenticated',
+#     ),
+#     'DEFAULT_THROTTLE_CLASSES': (
+#         'rest_framework.throttling.UserRateThrottle',
+#         'rest_framework.throttling.AnonRateThrottle',
+#     ),
+#     'DEFAULT_THROTTLE_RATES': {
+#         'user': '100/minute',
+#         'anon': '30/minute',
+#     },
+# }
 
 ROOT_URLCONF = 'GoTaskWeb.urls'
 

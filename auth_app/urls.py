@@ -15,12 +15,16 @@ Including another URLconf
 """
 from django.urls import path 
 
+# rest framework imports.
+from rest_framework.urlpatterns import format_suffix_patterns 
+
 # import home view
-import home.views as home_view
+import auth_app.views as auth_view
 
 urlpatterns = [
-    path('api/v1/', home_view.api_overview, name='api-overview'),
-    path('', home_view.Home.as_view(), name='home'),
-    path('account/sign-up/', home_view.SignUp.as_view(), name='sign-up'),
-    path('account/forgot-password/', home_view.ForgotPassword.as_view(), name='forgot-password'),
+    path('api/v1/account/sign-up/', auth_view.SignUpAPI.as_view()),
+    path('api/v1/account/sign-in/', auth_view.SignInAPI.as_view()),
+    path('api/v1/account/u/<slug:username>/', auth_view.UsersAPI.as_view()),
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
