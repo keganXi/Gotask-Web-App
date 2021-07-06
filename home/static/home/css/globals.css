@@ -1,0 +1,112 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+a:hover {
+  color: rgb(148, 72, 135);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input:focus{
+  outline: none;
+}
+
+
+/* styles */
+.primary-c{
+  color: rgb(100, 48, 91);
+}
+
+.primary-bg{
+  background-color: rgb(100, 48, 91);
+}
+
+.lightgrey{
+  color: grey;
+}
+
+.primary-text{
+  font-weight: 600;
+  color: white
+}
+
+.center-align{
+  display: flex;
+  justify-content: center;
+}
+
+.boxed{
+  width: 375px;
+}
+
+.align-text{
+  text-align: center;
+}
+
+.text-lg{
+  font-size: 28px;
+}
+
+.header{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.top-spacing{
+  margin-top: 60px;
+}
+
+.box-floater{
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.form-input{
+  margin-top: 7px;
+  padding: 11px;
+  width: 300px;
+  border: 1px solid rgb(179, 179, 179);
+  border-radius: 7px 7px 7px 7px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.form-input::placeholder{
+	color: rgb(179, 179, 179);
+}
+
+.auth-btn{
+  cursor: pointer;
+  border-radius: 7px 7px 7px 7px;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid rgb(100, 48, 91);
+  background-color: white;
+  color:rgb(100, 48, 91);
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: 0.5s;
+}
+
+
+.auth-btn:hover{
+  background-color: rgb(100, 48, 91);
+  border-color: rgb(100, 48, 91);
+  color: white;
+}

@@ -1,0 +1,32 @@
+/* nav */
+.nav{
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    padding: 15px;
+    width: 100%;
+}
+
+.nav-box{
+    width: 800px;
+}
+
+.nav-btn{
+    cursor: pointer;
+    border-radius: 25px 25px 25px 25px;
+    padding: 5px;
+    width: 100px;
+    border: 2px solid rgb(100, 48, 91);
+    background-color: white;
+    color:rgb(100, 48, 91);
+    font-weight: 600;
+    font-size: 14px;
+    float: inline-end;
+    transition: 0.5s;
+  }
+  
+  .nav-btn:hover{
+    background-color: rgb(100, 48, 91);
+    border-color: rgb(100, 48, 91);
+    color: white;
+  }

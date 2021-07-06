@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include 'home/default-links.html' %}
+        <link rel="stylesheet" href="{% static 'home/css/globals.css' %}"/>
+        <link rel="stylesheet" href="{% static 'home/css/index.css' %}"/>
+        <link rel="stylesheet" href="{% static 'home/css/navbar.css' %}"/>
+        <title>GoTask</title>
+    </head>
+
+    <body>
+        {% include 'home/navbar.html' %}
+
+        <main class="top-spacing center-align">
+            <div class="boxed">
+                <div class="detail-grouping-box">
+                    <div class="group-item">
+                        <p><img src="{% static 'home/images/lightbulb.svg' %}"><p>
+                        <small class="text-muted">Save all your daily tasks</small>
+                    </div>
+
+                    <div class="group-item">
+                    <p><img src="{% static 'home/images/bell.svg' %}"><p>
+                        <small class="text-muted">Set task notifications</small>
+                    </div>
+
+                    <div class="group-item">
+                    <p><img src="{% static 'home/images/connect-plug.svg' %}"><p>
+                        <small class="text-muted">Organize specific tasks</small>
+                    </div>
+                </div>
+
+                <header>
+                    <p class="text-lg align-text">
+                        Create and keep track of your daily tasks
+                        <img src="{% static 'home/images/calendar-alt.svg' %}">
+                    </p>
+                </header>
+
+                <section>
+                    <form method="POST" class="form-box">
+                        <input type="email" class="form-input" placeholder="Email"><br>
+                        <input type="password" class="form-input" placeholder="Password"><br>
+                        <a href="#" class="primary-c forgot-password-text">Forgot password?</a>
+                        <button class="auth-btn">Sign In</button>
+                    </form>
+                    <span class="">Don't have an account?
+                        <a href="{% url 'sign-up' %}" class="primary-c"> Sign Up</a>
+                    </span>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>
