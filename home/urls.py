@@ -21,6 +21,7 @@ import home.views as home_view
 urlpatterns = [
     path('api/v1/', home_view.api_overview, name='api-overview'),
     path('', home_view.Home.as_view(), name='home'),
+    path('home/', home_view.DashboardHome.as_view(), name='dashboard-home'),
     path('account/sign-up/', home_view.SignUp.as_view(), name='sign-up'),
     path('account/forgot-password/', home_view.ForgotPassword.as_view(), name='forgot-password'),
 ]

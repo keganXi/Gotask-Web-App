@@ -1,0 +1,75 @@
+
+/* home boxed */
+.home-boxed{
+    width: 900px;
+    padding: 15px;
+}
+
+/* top head bar */
+.top-head-bar{
+    position: fixed;
+}
+
+/* section */
+.inline-box{
+    display: inline-flex;
+}
+
+/* left nav */
+.left-nav{
+    position: fixed;
+    width: 180px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: white;
+}
+
+.left-item{
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 7px 7px 7px 7px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.left-item:hover{
+    -webkit-box-shadow: 1px 1px 2px 3px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    1px 1px 2px 3px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         1px 1px 2px 3px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+/* left item image spacing */
+.left-item-img{
+    margin-right: 10px;
+}
+
+
+/* feed section */
+.feed-section{
+    margin-left: 220px;
+    width: 500px;
+}
+
+.feed-item{
+    border-radius: 7px 7px 7px 7px;
+    border: 1px solid lightgrey;
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.notify-task{
+    float: inline-end;
+}
+
+.tags{
+    padding: 5px;
+    font-size: 12px;
+    color: white;
+    font-weight: 600;
+    background-color: rgb(39, 190, 47);
+    border-radius: 25px 25px 25px 25px;
+}

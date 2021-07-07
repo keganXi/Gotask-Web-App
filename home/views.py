@@ -20,6 +20,11 @@ def api_overview(request):
     return Response('api_urls')
 
 
+class DashboardHome(ListView):
+    queryset = ""
+    template_name = "home/dashboard-home.html"
+
+
 class Home(ListView):
     queryset = ""
     template_name = "home/index.html"

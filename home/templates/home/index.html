@@ -40,12 +40,14 @@
                 </header>
 
                 <section>
-                    <form method="POST" class="form-box">
-                        <input type="email" class="form-input" placeholder="Email"><br>
-                        <input type="password" class="form-input" placeholder="Password"><br>
+                    <div class="form-box">
+                        <input type="email" class="form-input" placeholder="Email" id="email"><br>
+                        <input type="password" class="form-input" placeholder="Password" id="password"><br>
                         <a href="{% url 'forgot-password' %}" class="primary-c forgot-password-text">Forgot password?</a>
-                        <button class="auth-btn">Sign In</button>
-                    </form>
+                        <button class="auth-btn" id="sign-in">
+                        Sign in
+                        </button>
+                    </div>
                     <span class="">Don't have an account?
                         <a href="{% url 'sign-up' %}" class="primary-c"> Sign Up</a>
                     </span>

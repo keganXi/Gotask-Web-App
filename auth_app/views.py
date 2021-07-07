@@ -58,6 +58,7 @@ class SignInAPI(APIView):
             # check if user exists.
             if auth_user is not None:
                 # login user.
+                print("\n\nLOGIN\n\n")
                 login(request, auth_user)
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)

@@ -5,6 +5,7 @@ class APICall{
         this.url = url;
         this.data = data;
         this.result = [];
+        console.log(this.data)
     }
 
     post(){
@@ -17,18 +18,31 @@ class APICall{
         })
         .then(res => res.json())
         .then(data => {
+            console.log(data)
             this.result.push(data)
         }); 
         return this.result;
     }
 }
 
-var requestMethod = "POST";
-var url = "http://localhost:8000/auth/api/v1/account/sign-in/";
-var data = {
-    "username":"jason",
-    "email":"json@gmail.com",
-    "password":"19980612"
-};
-var loadCall = new APICall(requestMethod, url, data);
-console.log(loadCall.post());
+
+function submitForm(){
+    // get user login credentials.
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var requestMethod = "POST";
+    var url = "http://localhost:8000/auth/api/v1/account/sign-in/";
+    var data = {
+        "email": email,
+        "password": password
+    };
+
+    var loadCall = new APICall(requestMethod, url, data);
+    console.log(loadCall.post());
+}
+
+
+var signInBtn = document.getElementById("sign-in");
+signInBtn.addEventListener("click", function(){
+    submitForm();
+});

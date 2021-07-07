@@ -1,0 +1,86 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'home/default-links.html' %}
+        <link rel="stylesheet" href="{% static 'home/css/dashboard-home.css' %}">
+        <link rel="stylesheet" href="{% static 'home/css/globals.css' %}">
+        <title>Gotask - Home</title>
+    </head>
+
+    <body>
+
+        <div class="center-align">
+            <div class="home-boxed">
+                <div class="top-head-bar">
+                    <span class="header primary-c">GoTask</span>
+                </div>
+
+                <div class="inline-box top-spacing">
+                    <div class="left-nav">
+                        <div class="left-item">
+                            <span>
+                            <img src="{% static 'home/images/tasks.svg' %}" class="left-item-img">Tasks
+                            </span>
+                        </div>
+
+                        <div class="left-item">
+                            <span>
+                            <img src="{% static 'home/images/user-solid.svg' %}" class="left-item-img">Profile
+                            </span>
+                        </div>
+
+                        <div class="left-item">
+                            <span>Tasks</span>
+                        </div>
+
+                        <div class="left-item">
+                            <span>
+                            <img src="{% static 'home/images/power-off.svg' %}" class="left-item-img">Logout
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="feed-section">
+                        <div class="feed-item">
+                            <span class="semi-bold">
+                            Deploy gotask web app.
+                            </span>
+                            <label class="tags">Important</label>
+                            <img src="{% static 'home/images/notify.svg' %}" class="notify-task">
+                            <br>
+                            <small class="lightgrey">
+                            12 january 2021
+                            </small>
+                        </div>
+
+                        <div class="feed-item">
+                            <span class="semi-bold">
+                            Push gotask to github.
+                            </span>
+                            <img src="{% static 'home/images/notify.svg' %}" class="notify-task">
+                            <br>
+                            <small class="lightgrey">
+                            12 january 2021
+                            </small>
+                        </div>
+
+                        <div class="feed-item">
+                            <span class="semi-bold">
+                            Finish EASIERJOBSEEKER project.
+                            </span>
+                            <label class="tags">Important</label>
+                            <img src="{% static 'home/images/notify.svg' %}" class="notify-task">
+                            <br>
+                            <small class="lightgrey">
+                            12 january 2021
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
