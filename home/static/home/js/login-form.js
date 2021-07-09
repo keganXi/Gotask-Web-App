@@ -5,7 +5,6 @@ class APICall{
         this.url = url;
         this.data = data;
         this.result = [];
-        console.log(this.data)
     }
 
     post(){
@@ -18,7 +17,6 @@ class APICall{
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             this.result.push(data)
         }); 
         return this.result;

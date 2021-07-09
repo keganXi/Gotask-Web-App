@@ -49,7 +49,34 @@
 /* feed section */
 .feed-section{
     margin-left: 220px;
-    width: 500px;
+    width: 510px;
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+.feed-selection{
+    margin-bottom: 20px;
+}
+
+.feed-select{
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.5s;
+    width: 200px;
+    padding: 7px;
+    margin: 5px;
+    border-radius: 25px 25px 25px 25px;
+}
+
+.active{
+    background-color: white;
+    -webkit-box-shadow: 1px 1px 2px 3px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    1px 1px 2px 3px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         1px 1px 2px 3px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
 .feed-item{
@@ -66,10 +93,12 @@
 }
 
 .tags{
-    padding: 5px;
-    font-size: 12px;
+    padding: 3px;
+    font-size: 11px;
+    text-align: center;
     color: white;
     font-weight: 600;
+    width: 70px;
     background-color: rgb(39, 190, 47);
     border-radius: 25px 25px 25px 25px;
 }

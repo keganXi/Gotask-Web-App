@@ -25,6 +25,10 @@ input:focus{
   outline: none;
 }
 
+label{
+  margin-bottom: 0px;
+}
+
 
 /* styles */
 .primary-c{
@@ -51,6 +55,7 @@ input:focus{
 .center-align{
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .boxed{
